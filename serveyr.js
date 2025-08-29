@@ -6,6 +6,7 @@ import chalk from "chalk";
 const app = express();
 const PORT = process.env.PORT || 10000;
 
+// Middleware
 app.use(express.json());
 
 // ✅ Allow only your frontend
@@ -54,6 +55,7 @@ app.post("/webhook", (req, res) => {
   res.sendStatus(200); // Always ACK
 });
 
+// Start server
 app.listen(PORT, () => {
   console.log(chalk.greenBright(`🚀 Server running on port ${PORT}`));
 });
